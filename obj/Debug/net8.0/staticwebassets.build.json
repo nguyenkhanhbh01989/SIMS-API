@@ -1,0 +1,12 @@
+{
+  "Version": 1,
+  "Hash": "/GRO1+PHyZEbp+BvdCabuX/fNTPqO9JPuHDb08cAp9k=",
+  "Source": "SIMS.API",
+  "BasePath": "_content/SIMS.API",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": [],
+  "Endpoints": []
+}

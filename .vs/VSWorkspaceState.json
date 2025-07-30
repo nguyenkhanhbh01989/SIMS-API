@@ -1,0 +1,16 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\Controllers",
+    "\\Data",
+    "\\DTOs",
+    "\\DTOs\\User",
+    "\\Repositories",
+    "\\Repositories\\Implementations",
+    "\\Services",
+    "\\Services\\Auth",
+    "\\Services\\User"
+  ],
+  "SelectedNode": "\\bin",
+  "PreviewInSolutionExplorer": false
+}
