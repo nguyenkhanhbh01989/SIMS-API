@@ -1,10 +1,26 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "D:\\.Net core C#\\SIMS.API\\",
+  "WorkspaceRootPath": "F:\\SIMS\\SIMS-API\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{FC43648C-1533-4254-20FD-13BC0A3F3972}|SIMS.API.csproj|d:\\.net core c#\\sims.api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "AbsoluteMoniker": "D:0:0:{FC43648C-1533-4254-20FD-13BC0A3F3972}|SIMS.API.csproj|f:\\sims\\sims-api\\docker-compose.yml||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{FC43648C-1533-4254-20FD-13BC0A3F3972}|SIMS.API.csproj|solutionrelative:docker-compose.yml||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FC43648C-1533-4254-20FD-13BC0A3F3972}|SIMS.API.csproj|f:\\sims\\sims-api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
       "RelativeMoniker": "D:0:0:{FC43648C-1533-4254-20FD-13BC0A3F3972}|SIMS.API.csproj|solutionrelative:appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FC43648C-1533-4254-20FD-13BC0A3F3972}|SIMS.API.csproj|f:\\sims\\sims-api\\init.sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}",
+      "RelativeMoniker": "D:0:0:{FC43648C-1533-4254-20FD-13BC0A3F3972}|SIMS.API.csproj|solutionrelative:init.sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FC43648C-1533-4254-20FD-13BC0A3F3972}|SIMS.API.csproj|f:\\sims\\sims-api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FC43648C-1533-4254-20FD-13BC0A3F3972}|SIMS.API.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FC43648C-1533-4254-20FD-13BC0A3F3972}|SIMS.API.csproj|f:\\sims\\sims-api\\init.sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}|CodeFrame",
+      "RelativeMoniker": "D:0:0:{FC43648C-1533-4254-20FD-13BC0A3F3972}|SIMS.API.csproj|solutionrelative:init.sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}|CodeFrame"
     }
   ],
   "DocumentGroupContainers": [
@@ -14,24 +30,66 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Bookmark",
-              "Name": "ST:0:0:{eefa5220-e298-11d0-8f78-00a0c9110057}"
+              "Name": "ST:129:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
             },
             {
               "$type": "Bookmark",
-              "Name": "ST:0:0:{57d563b6-44a5-47df-85be-f4199ad6b651}"
+              "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "init.sql ",
+              "DocumentMoniker": "F:\\SIMS\\SIMS-API\\init.sql",
+              "RelativeDocumentMoniker": "init.sql",
+              "ToolTip": "F:\\SIMS\\SIMS-API\\init.sql",
+              "RelativeToolTip": "init.sql",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
+              "WhenOpened": "2025-07-31T04:43:56.212Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "docker-compose.yml",
+              "DocumentMoniker": "F:\\SIMS\\SIMS-API\\docker-compose.yml",
+              "RelativeDocumentMoniker": "docker-compose.yml",
+              "ToolTip": "F:\\SIMS\\SIMS-API\\docker-compose.yml",
+              "RelativeToolTip": "docker-compose.yml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003775|",
+              "WhenOpened": "2025-07-31T02:21:01.833Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Program.cs",
+              "DocumentMoniker": "F:\\SIMS\\SIMS-API\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "F:\\SIMS\\SIMS-API\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AgIAABwAAAAAAAAAAAAAAC0AAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-31T01:55:09.651Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
               "Title": "appsettings.json",
-              "DocumentMoniker": "D:\\.Net core C#\\SIMS.API\\appsettings.json",
+              "DocumentMoniker": "F:\\SIMS\\SIMS-API\\appsettings.json",
               "RelativeDocumentMoniker": "appsettings.json",
-              "ToolTip": "D:\\.Net core C#\\SIMS.API\\appsettings.json*",
-              "RelativeToolTip": "appsettings.json*",
+              "ToolTip": "F:\\SIMS\\SIMS-API\\appsettings.json",
+              "RelativeToolTip": "appsettings.json",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
               "WhenOpened": "2025-07-30T01:36:26.396Z",
