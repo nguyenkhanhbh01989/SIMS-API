@@ -15,11 +15,20 @@ using System.Text;
 
 var builder = WebApplication.CreateBuilder(args);
 
-// 1. Đăng ký DbContext
+// 1. Đăng ký DbContext (DÙNG BIẾN MÔI TRƯỜNG Railway)
 builder.Services.AddDbContext<AppDbContext>(options =>
-    options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
+{
+    var connectionString = Environment.GetEnvironmentVariable("RAILWAY_DATABASE_URL");
 
-// 2. Đăng ký Repositories và Services cho Dependency Injection
+    if (string.IsNullOrEmpty(connectionString))
+    {
+        throw new Exception("RAILWAY_DATABASE_URL environment variable is not set.");
+    }
+
+    options.UseSqlServer(connectionString);
+});
+
+// 2. Đăng ký Repositories và Services
 builder.Services.AddScoped<IUserRepository, UserRepository>();
 builder.Services.AddScoped<ICourseRepository, CourseRepository>();
 builder.Services.AddScoped<IGradeRepository, GradeRepository>();
@@ -52,14 +61,15 @@ builder.Services.AddAuthentication(options =>
         ValidateIssuerSigningKey = true,
         ValidIssuer = builder.Configuration["Authentication:Jwt:Issuer"],
         ValidAudience = builder.Configuration["Authentication:Jwt:Audience"],
-        IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(builder.Configuration["Authentication:Jwt:Key"]!))
+        IssuerSigningKey = new SymmetricSecurityKey(
+            Encoding.UTF8.GetBytes(builder.Configuration["Authentication:Jwt:Key"]!)
+        )
     };
 });
 
+// 4. Swagger
 builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
-
-// 4. Cấu hình Swagger để hỗ trợ gửi token
 builder.Services.AddSwaggerGen(options =>
 {
     options.AddSecurityDefinition("Bearer", new OpenApiSecurityScheme
@@ -82,13 +92,14 @@ builder.Services.AddSwaggerGen(options =>
                     Id = "Bearer"
                 }
             },
-            new string[]{}
+            new string[] {}
         }
     });
 });
 
 var app = builder.Build();
 
+// Middleware pipeline
 if (app.Environment.IsDevelopment())
 {
     app.UseSwagger();

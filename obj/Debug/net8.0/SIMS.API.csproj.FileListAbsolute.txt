@@ -359,3 +359,5 @@ F:\SIMS\SIMS-API\obj\Debug\net8.0\refint\SIMS.API.dll
 F:\SIMS\SIMS-API\obj\Debug\net8.0\SIMS.API.pdb
 F:\SIMS\SIMS-API\obj\Debug\net8.0\SIMS.API.genruntimeconfig.cache
 F:\SIMS\SIMS-API\obj\Debug\net8.0\ref\SIMS.API.dll
+F:\SIMS\SIMS-API\bin\Debug\net8.0\Npgsql.dll
+F:\SIMS\SIMS-API\bin\Debug\net8.0\Npgsql.EntityFrameworkCore.PostgreSQL.dll
