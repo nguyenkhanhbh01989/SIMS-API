@@ -70,5 +70,12 @@ namespace SIMS.API.Repositories.Implementations
 
             await _context.SaveChangesAsync();
         }
+        public async Task<IEnumerable<Attendance>> GetAttendanceForStudentAsync(int courseId, int studentId)
+        {
+            return await _context.Attendances
+                .Where(a => a.CourseId == courseId && a.StudentId == studentId)
+                .OrderBy(a => a.AttendanceDate)
+                .ToListAsync();
+        }
     }
 }

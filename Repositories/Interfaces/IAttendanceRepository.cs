@@ -9,5 +9,6 @@ namespace SIMS.API.Repositories.Interfaces
     {
         Task<IEnumerable<Attendance>> GetAttendanceForCourseAsync(int courseId, DateOnly? date);
         Task UpsertAttendanceAsync(IEnumerable<Attendance> attendanceRecords);
+        Task<IEnumerable<Attendance>> GetAttendanceForStudentAsync(int courseId, int studentId);
     }
 }

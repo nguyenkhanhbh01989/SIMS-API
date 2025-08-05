@@ -271,6 +271,85 @@
     "ReturnTypes": []
   },
   {
+    "ContainingType": "SIMS.API.Controllers.SchedulesController",
+    "Method": "GetAllSchedules",
+    "RelativePath": "api/schedules",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "SIMS.API.Controllers.SchedulesController",
+    "Method": "CreateSchedule",
+    "RelativePath": "api/schedules",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "scheduleDto",
+        "Type": "SIMS.API.DTOs.Schedule.ScheduleCreateDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "SIMS.API.Controllers.SchedulesController",
+    "Method": "UpdateSchedule",
+    "RelativePath": "api/schedules/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "scheduleDto",
+        "Type": "SIMS.API.DTOs.Schedule.ScheduleUpdateDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "SIMS.API.Controllers.SchedulesController",
+    "Method": "DeleteSchedule",
+    "RelativePath": "api/schedules/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "SIMS.API.Controllers.StudentController",
+    "Method": "GetMyAttendanceForCourse",
+    "RelativePath": "api/student/my-attendance/{courseId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "courseId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "SIMS.API.Controllers.StudentController",
     "Method": "GetMyCourses",
     "RelativePath": "api/student/my-courses",
@@ -294,6 +373,16 @@
         "IsRequired": true
       }
     ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "SIMS.API.Controllers.StudentController",
+    "Method": "GetMySchedule",
+    "RelativePath": "api/student/my-schedule",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
     "ReturnTypes": []
   },
   {
@@ -404,6 +493,16 @@
         "IsRequired": true
       }
     ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "SIMS.API.Controllers.TeacherController",
+    "Method": "GetMySchedule",
+    "RelativePath": "api/teacher/my-schedule",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
     "ReturnTypes": []
   },
   {

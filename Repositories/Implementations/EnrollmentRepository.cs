@@ -35,13 +35,14 @@ namespace SIMS.API.Repositories.Implementations
 
         public async Task<CourseStudent?> GetEnrollmentAsync(int courseId, int studentId)
         {
+            // SỬA LỖI: Thêm .Include(cs => cs.Student) để tải thông tin sinh viên
             return await _context.CourseStudents
+                .Include(cs => cs.Student)
                 .FirstOrDefaultAsync(cs => cs.CourseId == courseId && cs.StudentId == studentId);
         }
 
         public async Task<IEnumerable<CourseStudent>> GetAllEnrollmentsAsync()
         {
-            // Include thông tin liên quan để hiển thị
             return await _context.CourseStudents
                 .Include(cs => cs.Course)
                 .Include(cs => cs.Student)
@@ -49,12 +50,13 @@ namespace SIMS.API.Repositories.Implementations
                 .ThenBy(cs => cs.Student.FullName)
                 .ToListAsync();
         }
+
         public async Task<IEnumerable<CourseStudent>> GetEnrollmentsByStudentIdAsync(int studentId)
         {
             return await _context.CourseStudents
                 .Where(cs => cs.StudentId == studentId)
                 .Include(cs => cs.Course)
-                .ThenInclude(c => c.Teacher) // Lấy cả thông tin giáo viên của môn học
+                .ThenInclude(c => c.Teacher)
                 .OrderBy(cs => cs.Course.Name)
                 .ToListAsync();
         }

@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using SIMS.API.Services.Student;
+using SIMS.API.Services.Schedule; // Thêm using này
 using System;
 using System.Security.Claims;
 using System.Threading.Tasks;
@@ -9,14 +10,17 @@ namespace SIMS.API.Controllers
 {
     [Route("api/student")]
     [ApiController]
-    [Authorize(Roles = "Student")] // CHỈ SINH VIÊN MỚI CÓ QUYỀN
+    [Authorize(Roles = "Student")]
     public class StudentController : ControllerBase
     {
         private readonly IStudentService _studentService;
+        private readonly IScheduleService _scheduleService; // SỬA LỖI: Khai báo trường
 
-        public StudentController(IStudentService studentService)
+        // SỬA LỖI: Cập nhật constructor để nhận cả hai service
+        public StudentController(IStudentService studentService, IScheduleService scheduleService)
         {
             _studentService = studentService;
+            _scheduleService = scheduleService; // Gán giá trị
         }
 
         // GET /api/student/my-courses
@@ -44,14 +48,38 @@ namespace SIMS.API.Controllers
             }
             catch (ApplicationException ex)
             {
-                return Forbid(ex.Message); // 403 Forbidden nếu không đăng ký môn học
+                return Forbid(ex.Message);
             }
         }
 
+        // GET /api/student/my-attendance/{courseId}
+        [HttpGet("my-attendance/{courseId}")]
+        public async Task<IActionResult> GetMyAttendanceForCourse(int courseId)
+        {
+            try
+            {
+                var studentId = GetCurrentUserId();
+                var records = await _studentService.GetMyAttendanceForCourseAsync(studentId, courseId);
+                return Ok(records);
+            }
+            catch (ApplicationException ex)
+            {
+                return Forbid(ex.Message);
+            }
+        }
+
+        // GET /api/student/my-schedule
+        [HttpGet("my-schedule")]
+        public async Task<IActionResult> GetMySchedule()
+        {
+            var studentId = GetCurrentUserId();
+            var schedule = await _scheduleService.GetStudentScheduleAsync(studentId);
+            return Ok(schedule);
+        }
+
+        // SỬA LỖI: Đảm bảo phương thức này nằm BÊN TRONG class
         private int GetCurrentUserId()
         {
-            // Lấy ID của người dùng đang đăng nhập từ JWT token
-            // Đảm bảo an toàn, sinh viên chỉ có thể xem dữ liệu của chính mình
             var userIdClaim = User.FindFirst(ClaimTypes.NameIdentifier);
             if (userIdClaim == null || !int.TryParse(userIdClaim.Value, out var userId))
             {

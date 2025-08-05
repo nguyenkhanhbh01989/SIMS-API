@@ -1,6 +1,6 @@
 ﻿using SIMS.API.DTOs.Enrollment;
 using SIMS.API.DTOs.Teacher;
-using SIMS.API.Models; // Đảm bảo có using này
+using SIMS.API.Models;
 using SIMS.API.Repositories.Interfaces;
 using System.Collections.Generic;
 using System.Linq;
@@ -13,16 +13,23 @@ namespace SIMS.API.Services.Enrollment
         private readonly IEnrollmentRepository _enrollmentRepository;
         private readonly IUserRepository _userRepository;
         private readonly ICourseRepository _courseRepository;
+        private readonly IGradeRepository _gradeRepository; // THÊM DEPENDENCY MỚI
 
-        public EnrollmentService(IEnrollmentRepository enrollmentRepository, IUserRepository userRepository, ICourseRepository courseRepository)
+        public EnrollmentService(
+            IEnrollmentRepository enrollmentRepository,
+            IUserRepository userRepository,
+            ICourseRepository courseRepository,
+            IGradeRepository gradeRepository) // INJECT VÀO CONSTRUCTOR
         {
             _enrollmentRepository = enrollmentRepository;
             _userRepository = userRepository;
             _courseRepository = courseRepository;
+            _gradeRepository = gradeRepository; // GÁN GIÁ TRỊ
         }
 
         public async Task<EnrollmentViewDto> EnrollStudentAsync(EnrollmentRequestDto requestDto)
         {
+            // 1. Kiểm tra sinh viên và môn học (logic không đổi)
             var student = await _userRepository.GetUserByIdAsync(requestDto.StudentId);
             if (student == null || student.Role != "Student")
             {
@@ -41,19 +48,33 @@ namespace SIMS.API.Services.Enrollment
                 throw new ApplicationException("Sinh viên đã được đăng ký vào môn học này.");
             }
 
+            // 2. Tạo bản ghi đăng ký mới
             var newEnrollment = new CourseStudent
             {
                 CourseId = requestDto.CourseId,
                 StudentId = requestDto.StudentId,
                 EnrolledAt = DateTime.UtcNow
             };
-
             await _enrollmentRepository.EnrollAsync(newEnrollment);
 
-            // Lỗi xảy ra ở đây, cần sửa lại lời gọi
+            // 3. *** LOGIC MỚI: Tự động tạo một bản ghi điểm trống ***
+            var newGradeRecord = new Grade
+            {
+                CourseId = requestDto.CourseId,
+                StudentId = requestDto.StudentId,
+                Midterm = null, // Bắt đầu với giá trị NULL
+                Final = null,
+                Other = null,
+                Total = null,
+                UpdatedAt = DateTime.UtcNow
+            };
+            await _gradeRepository.AddOrUpdateGradeAsync(newGradeRecord);
+
+            // 4. Trả về thông tin ghi danh (logic không đổi)
             return MapToViewDto(student, course, newEnrollment);
         }
 
+        // ... (Các phương thức còn lại không thay đổi)
         public async Task<bool> UnenrollStudentAsync(int courseId, int studentId)
         {
             var enrollment = await _enrollmentRepository.GetEnrollmentAsync(courseId, studentId);
@@ -68,7 +89,6 @@ namespace SIMS.API.Services.Enrollment
         public async Task<IEnumerable<EnrollmentViewDto>> GetAllEnrollmentsAsync()
         {
             var enrollments = await _enrollmentRepository.GetAllEnrollmentsAsync();
-            // Lỗi xảy ra ở đây, cần sửa lại lời gọi
             return enrollments.Select(e => MapToViewDto(e.Student, e.Course, e));
         }
 
@@ -84,7 +104,6 @@ namespace SIMS.API.Services.Enrollment
             });
         }
 
-        // SỬA LỖI: Chỉ định rõ ràng kiểu dữ liệu là Models.User và Models.Course
         private EnrollmentViewDto MapToViewDto(Models.User student, Models.Course course, CourseStudent enrollment)
         {
             return new EnrollmentViewDto

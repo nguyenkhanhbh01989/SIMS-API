@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\.Net core C#\\SIMS.API\\SIMS.API.csproj": {}
+    "D:\\DotNetProjects\\SIMS.API\\SIMS.API.csproj": {}
   },
   "projects": {
-    "D:\\.Net core C#\\SIMS.API\\SIMS.API.csproj": {
+    "D:\\DotNetProjects\\SIMS.API\\SIMS.API.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\.Net core C#\\SIMS.API\\SIMS.API.csproj",
+        "projectUniqueName": "D:\\DotNetProjects\\SIMS.API\\SIMS.API.csproj",
         "projectName": "SIMS.API",
-        "projectPath": "D:\\.Net core C#\\SIMS.API\\SIMS.API.csproj",
+        "projectPath": "D:\\DotNetProjects\\SIMS.API\\SIMS.API.csproj",
         "packagesPath": "C:\\Users\\Duy Khanh\\.nuget\\packages\\",
-        "outputPath": "D:\\.Net core C#\\SIMS.Api\\obj\\",
+        "outputPath": "D:\\DotNetProjects\\SIMS.API\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -82,6 +82,10 @@
             "Microsoft.IdentityModel.Tokens": {
               "target": "Package",
               "version": "[7.2.0, )"
+            },
+            "Microsoft.VisualStudio.Azure.Containers.Tools.Targets": {
+              "target": "Package",
+              "version": "[1.21.0, )"
             },
             "Swashbuckle.AspNetCore": {
               "target": "Package",

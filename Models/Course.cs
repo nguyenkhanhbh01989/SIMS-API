@@ -31,6 +31,9 @@ public partial class Course
     [InverseProperty("Course")]
     public virtual ICollection<Grade> Grades { get; set; } = new List<Grade>();
 
+    [InverseProperty("Course")]
+    public virtual ICollection<Schedule> Schedules { get; set; } = new List<Schedule>();
+
     [ForeignKey("TeacherId")]
     [InverseProperty("Courses")]
     public virtual User? Teacher { get; set; }

@@ -1,5 +1,6 @@
 ﻿using SIMS.API.DTOs.Course;
 using SIMS.API.DTOs.Teacher;
+using SIMS.API.DTOs.Attendance; 
 using SIMS.API.Repositories.Interfaces;
 using System.Collections.Generic;
 using System.Linq;
@@ -11,11 +12,17 @@ namespace SIMS.API.Services.Student
     {
         private readonly IEnrollmentRepository _enrollmentRepository;
         private readonly IGradeRepository _gradeRepository;
+        private readonly IAttendanceRepository _attendanceRepository;
 
-        public StudentService(IEnrollmentRepository enrollmentRepository, IGradeRepository gradeRepository)
+        // SỬA LỖI: Cập nhật constructor để nhận IAttendanceRepository
+        public StudentService(
+            IEnrollmentRepository enrollmentRepository,
+            IGradeRepository gradeRepository,
+            IAttendanceRepository attendanceRepository)
         {
             _enrollmentRepository = enrollmentRepository;
             _gradeRepository = gradeRepository;
+            _attendanceRepository = attendanceRepository; // Gán giá trị
         }
 
         public async Task<IEnumerable<CourseViewDto>> GetMyCoursesAsync(int studentId)
@@ -34,6 +41,33 @@ namespace SIMS.API.Services.Student
 
         public async Task<GradeViewDto?> GetMyGradeForCourseAsync(int studentId, int courseId)
         {
+            var enrollment = await _enrollmentRepository.GetEnrollmentAsync(courseId, studentId);
+            if (enrollment == null)
+            {
+                throw new ApplicationException("Bạn chưa đăng ký môn học này.");
+            }
+
+            var grade = await _gradeRepository.GetGradeAsync(courseId, studentId);
+            if (grade == null)
+            {
+                return null;
+            }
+
+            return new GradeViewDto
+            {
+                StudentId = grade.StudentId,
+                StudentName = enrollment.Student.FullName ?? "N/A",
+                Midterm = grade.Midterm,
+                Final = grade.Final,
+                Other = grade.Other,
+                Total = grade.Total,
+                UpdatedAt = grade.UpdatedAt
+            };
+        }
+
+        // SỬA LỖI: Triển khai đầy đủ phương thức mới
+        public async Task<IEnumerable<AttendanceRecordDto>> GetMyAttendanceForCourseAsync(int studentId, int courseId)
+        {
             // 1. Xác thực sinh viên có đăng ký môn học này không
             var enrollment = await _enrollmentRepository.GetEnrollmentAsync(courseId, studentId);
             if (enrollment == null)
@@ -41,24 +75,18 @@ namespace SIMS.API.Services.Student
                 throw new ApplicationException("Bạn chưa đăng ký môn học này.");
             }
 
-            // 2. Lấy điểm của sinh viên
-            var grade = await _gradeRepository.GetGradeAsync(courseId, studentId);
-            if (grade == null)
-            {
-                return null; // Sinh viên chưa có điểm
-            }
+            // 2. Lấy lịch sử điểm danh bằng _attendanceRepository
+            var attendanceRecords = await _attendanceRepository.GetAttendanceForStudentAsync(courseId, studentId);
 
             // 3. Map sang DTO để trả về
-            return new GradeViewDto
+            return attendanceRecords.Select(a => new AttendanceRecordDto
             {
-                StudentId = grade.StudentId,
-                StudentName = enrollment.Student.FullName ?? "N/A", // Lấy tên từ bản ghi enrollment
-                Midterm = grade.Midterm,
-                Final = grade.Final,
-                Other = grade.Other,
-                Total = grade.Total,
-                UpdatedAt = grade.UpdatedAt
-            };
+                StudentId = a.StudentId,
+                StudentName = enrollment.Student.FullName ?? "N/A",
+                AttendanceDate = a.AttendanceDate,
+                IsPresent = a.IsPresent,
+                Note = a.Note
+            });
         }
     }
 }

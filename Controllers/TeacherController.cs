@@ -2,10 +2,12 @@
 using Microsoft.AspNetCore.Mvc;
 using SIMS.API.DTOs.Teacher;
 using SIMS.API.Services.Teacher;
+using SIMS.API.Services.Schedule; // Thêm using này
 using System;
 using System.Security.Claims;
 using System.Threading.Tasks;
-using SIMS.API.DTOs.Attendance; 
+using SIMS.API.DTOs.Attendance;
+
 namespace SIMS.API.Controllers
 {
     [Route("api/teacher")]
@@ -14,16 +16,22 @@ namespace SIMS.API.Controllers
     public class TeacherController : ControllerBase
     {
         private readonly ITeacherService _teacherService;
+        private readonly IScheduleService _scheduleService; // SỬA LỖI: Khai báo trường
 
-        public TeacherController(ITeacherService teacherService)
+        // SỬA LỖI: Cập nhật constructor để nhận cả hai service
+        public TeacherController(ITeacherService teacherService, IScheduleService scheduleService)
         {
             _teacherService = teacherService;
+            _scheduleService = scheduleService; // Gán giá trị
         }
 
-        // ... (Các endpoint khác không thay đổi)
         [HttpGet("courses")]
         public async Task<IActionResult> GetMyCourses()
         {
+            if (!User.IsInRole("Teacher"))
+            {
+                return Forbid("Chỉ giáo viên mới có thể xem danh sách lớp học của mình.");
+            }
             var teacherId = GetCurrentUserId();
             var courses = await _teacherService.GetAssignedCoursesAsync(teacherId);
             return Ok(courses);
@@ -34,8 +42,7 @@ namespace SIMS.API.Controllers
         {
             try
             {
-                var teacherId = GetCurrentUserId();
-                var students = await _teacherService.GetStudentsInCourseAsync(teacherId, courseId);
+                var students = await _teacherService.GetStudentsInCourseAsync(User, courseId);
                 return Ok(students);
             }
             catch (ApplicationException ex)
@@ -49,8 +56,7 @@ namespace SIMS.API.Controllers
         {
             try
             {
-                var teacherId = GetCurrentUserId();
-                var grades = await _teacherService.GetGradesForCourseAsync(teacherId, courseId);
+                var grades = await _teacherService.GetGradesForCourseAsync(User, courseId);
                 return Ok(grades);
             }
             catch (ApplicationException ex)
@@ -64,8 +70,7 @@ namespace SIMS.API.Controllers
         {
             try
             {
-                var teacherId = GetCurrentUserId();
-                var updatedGrade = await _teacherService.UpdateStudentGradeAsync(teacherId, courseId, studentId, gradeDto);
+                var updatedGrade = await _teacherService.UpdateStudentGradeAsync(User, courseId, studentId, gradeDto);
                 return Ok(updatedGrade);
             }
             catch (ApplicationException ex)
@@ -74,15 +79,12 @@ namespace SIMS.API.Controllers
             }
         }
 
-        // --- ENDPOINTS MỚI CHO ĐIỂM DANH ---
-
         [HttpPost("courses/{courseId}/attendance")]
         public async Task<IActionResult> TakeAttendance(int courseId, [FromBody] TakeAttendanceRequestDto attendanceDto)
         {
             try
             {
-                var teacherId = GetCurrentUserId();
-                await _teacherService.TakeOrUpdateAttendanceAsync(teacherId, courseId, attendanceDto);
+                await _teacherService.TakeOrUpdateAttendanceAsync(User, courseId, attendanceDto);
                 return Ok(new { message = $"Đã ghi nhận điểm danh cho ngày {attendanceDto.AttendanceDate}." });
             }
             catch (ApplicationException ex)
@@ -96,8 +98,7 @@ namespace SIMS.API.Controllers
         {
             try
             {
-                var teacherId = GetCurrentUserId();
-                var records = await _teacherService.GetAttendanceForCourseAsync(teacherId, courseId, date);
+                var records = await _teacherService.GetAttendanceForCourseAsync(User, courseId, date);
                 return Ok(records);
             }
             catch (ApplicationException ex)
@@ -106,6 +107,16 @@ namespace SIMS.API.Controllers
             }
         }
 
+        [HttpGet("my-schedule")]
+        public async Task<IActionResult> GetMySchedule()
+        {
+            if (!User.IsInRole("Teacher")) return Forbid();
+            var teacherId = GetCurrentUserId();
+            var schedule = await _scheduleService.GetTeacherScheduleAsync(teacherId);
+            return Ok(schedule);
+        }
+
+        // SỬA LỖI: Đảm bảo phương thức này nằm BÊN TRONG class
         private int GetCurrentUserId()
         {
             var userIdClaim = User.FindFirst(ClaimTypes.NameIdentifier);
