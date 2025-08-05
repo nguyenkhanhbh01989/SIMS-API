@@ -83,7 +83,7 @@ public partial class AppDbContext : DbContext
 
         modelBuilder.Entity<Schedule>(entity =>
         {
-            entity.HasKey(e => e.Id).HasName("PK__Schedule__3214EC07803BDA6F");
+            entity.HasKey(e => e.Id).HasName("PK__Schedule__3214EC07D284FCAF");
 
             entity.HasOne(d => d.Course).WithMany(p => p.Schedules).HasConstraintName("FK_Schedules_Course");
         });

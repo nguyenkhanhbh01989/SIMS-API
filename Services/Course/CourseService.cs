@@ -3,13 +3,14 @@ using SIMS.API.Repositories.Interfaces;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using SIMS.API.Services.Course;
 
 namespace SIMS.API.Services.Course
 {
     public class CourseService : ICourseService
     {
         private readonly ICourseRepository _courseRepository;
-        private readonly IUserRepository _userRepository; // Inject UserRepository để kiểm tra giáo viên
+        private readonly IUserRepository _userRepository;
 
         public CourseService(ICourseRepository courseRepository, IUserRepository userRepository)
         {
@@ -19,7 +20,6 @@ namespace SIMS.API.Services.Course
 
         public async Task<CourseViewDto> CreateCourseAsync(CreateUpdateCourseDto courseDto)
         {
-            // Kiểm tra xem TeacherId có tồn tại và có phải là giáo viên không
             if (courseDto.TeacherId.HasValue)
             {
                 var teacher = await _userRepository.GetUserByIdAsync(courseDto.TeacherId.Value);
@@ -34,15 +34,17 @@ namespace SIMS.API.Services.Course
                 Name = courseDto.Name,
                 Semester = courseDto.Semester,
                 TeacherId = courseDto.TeacherId,
+                StartDate = courseDto.StartDate, // Gán giá trị nullable
+                EndDate = courseDto.EndDate,     // Gán giá trị nullable
                 CreatedAt = DateTime.UtcNow
             };
 
             var createdCourse = await _courseRepository.CreateAsync(newCourse);
-            // Tải lại thông tin để có Teacher object
             var result = await _courseRepository.GetByIdAsync(createdCourse.Id);
             return MapCourseToViewDto(result!);
         }
 
+        // ... (Các phương thức còn lại không thay đổi)
         public async Task<IEnumerable<CourseViewDto>> GetAllCoursesAsync()
         {
             var courses = await _courseRepository.GetAllAsync();
@@ -63,7 +65,6 @@ namespace SIMS.API.Services.Course
                 throw new ApplicationException("Không tìm thấy môn học để cập nhật.");
             }
 
-            // Kiểm tra giáo viên mới nếu có thay đổi
             if (courseDto.TeacherId.HasValue)
             {
                 var teacher = await _userRepository.GetUserByIdAsync(courseDto.TeacherId.Value);
@@ -76,6 +77,8 @@ namespace SIMS.API.Services.Course
             courseToUpdate.Name = courseDto.Name;
             courseToUpdate.Semester = courseDto.Semester;
             courseToUpdate.TeacherId = courseDto.TeacherId;
+            courseToUpdate.StartDate = courseDto.StartDate;
+            courseToUpdate.EndDate = courseDto.EndDate;
 
             var updatedCourse = await _courseRepository.UpdateAsync(courseToUpdate);
             return MapCourseToViewDto(updatedCourse);
@@ -86,14 +89,13 @@ namespace SIMS.API.Services.Course
             var course = await _courseRepository.GetByIdAsync(id);
             if (course == null)
             {
-                return false; // Không tìm thấy để xóa
+                return false;
             }
 
             await _courseRepository.DeleteAsync(id);
             return true;
         }
 
-        // Phương thức helper để map từ Entity sang DTO
         private CourseViewDto MapCourseToViewDto(Models.Course course)
         {
             return new CourseViewDto
@@ -102,9 +104,10 @@ namespace SIMS.API.Services.Course
                 Name = course.Name,
                 Semester = course.Semester,
                 TeacherId = course.TeacherId,
-                // Lấy tên giáo viên từ object đã được Include
                 TeacherName = course.Teacher?.FullName,
-                CreatedAt = course.CreatedAt
+                CreatedAt = course.CreatedAt,
+                StartDate = course.StartDate,
+                EndDate = course.EndDate
             };
         }
     }

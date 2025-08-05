@@ -3,6 +3,58 @@
   "WorkspaceRootPath": "D:\\DotNetProjects\\SIMS.API\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{FC43648C-1533-4254-20FD-13BC0A3F3972}|SIMS.API.csproj|d:\\dotnetprojects\\sims.api\\services\\teacher\\teacherservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FC43648C-1533-4254-20FD-13BC0A3F3972}|SIMS.API.csproj|solutionrelative:services\\teacher\\teacherservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FC43648C-1533-4254-20FD-13BC0A3F3972}|SIMS.API.csproj|d:\\dotnetprojects\\sims.api\\services\\enrollment\\enrollmentservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FC43648C-1533-4254-20FD-13BC0A3F3972}|SIMS.API.csproj|solutionrelative:services\\enrollment\\enrollmentservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FC43648C-1533-4254-20FD-13BC0A3F3972}|SIMS.API.csproj|d:\\dotnetprojects\\sims.api\\services\\enrollment\\ienrollmentservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FC43648C-1533-4254-20FD-13BC0A3F3972}|SIMS.API.csproj|solutionrelative:services\\enrollment\\ienrollmentservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FC43648C-1533-4254-20FD-13BC0A3F3972}|SIMS.API.csproj|d:\\dotnetprojects\\sims.api\\repositories\\implementations\\courserepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FC43648C-1533-4254-20FD-13BC0A3F3972}|SIMS.API.csproj|solutionrelative:repositories\\implementations\\courserepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FC43648C-1533-4254-20FD-13BC0A3F3972}|SIMS.API.csproj|d:\\dotnetprojects\\sims.api\\repositories\\interfaces\\icourserepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FC43648C-1533-4254-20FD-13BC0A3F3972}|SIMS.API.csproj|solutionrelative:repositories\\interfaces\\icourserepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FC43648C-1533-4254-20FD-13BC0A3F3972}|SIMS.API.csproj|d:\\dotnetprojects\\sims.api\\controllers\\enrollmentscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FC43648C-1533-4254-20FD-13BC0A3F3972}|SIMS.API.csproj|solutionrelative:controllers\\enrollmentscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FC43648C-1533-4254-20FD-13BC0A3F3972}|SIMS.API.csproj|d:\\dotnetprojects\\sims.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FC43648C-1533-4254-20FD-13BC0A3F3972}|SIMS.API.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FC43648C-1533-4254-20FD-13BC0A3F3972}|SIMS.API.csproj|d:\\dotnetprojects\\sims.api\\services\\course\\courseservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FC43648C-1533-4254-20FD-13BC0A3F3972}|SIMS.API.csproj|solutionrelative:services\\course\\courseservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FC43648C-1533-4254-20FD-13BC0A3F3972}|SIMS.API.csproj|d:\\dotnetprojects\\sims.api\\models\\course.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FC43648C-1533-4254-20FD-13BC0A3F3972}|SIMS.API.csproj|solutionrelative:models\\course.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FC43648C-1533-4254-20FD-13BC0A3F3972}|SIMS.API.csproj|d:\\dotnetprojects\\sims.api\\dtos\\course\\createupdatecoursedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FC43648C-1533-4254-20FD-13BC0A3F3972}|SIMS.API.csproj|solutionrelative:dtos\\course\\createupdatecoursedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FC43648C-1533-4254-20FD-13BC0A3F3972}|SIMS.API.csproj|d:\\dotnetprojects\\sims.api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{FC43648C-1533-4254-20FD-13BC0A3F3972}|SIMS.API.csproj|solutionrelative:appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FC43648C-1533-4254-20FD-13BC0A3F3972}|SIMS.API.csproj|d:\\dotnetprojects\\sims.api\\services\\schedule\\ischeduleservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FC43648C-1533-4254-20FD-13BC0A3F3972}|SIMS.API.csproj|solutionrelative:services\\schedule\\ischeduleservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FC43648C-1533-4254-20FD-13BC0A3F3972}|SIMS.API.csproj|d:\\dotnetprojects\\sims.api\\services\\course\\icourseservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FC43648C-1533-4254-20FD-13BC0A3F3972}|SIMS.API.csproj|solutionrelative:services\\course\\icourseservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{FC43648C-1533-4254-20FD-13BC0A3F3972}|SIMS.API.csproj|d:\\dotnetprojects\\sims.api\\controllers\\teachercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{FC43648C-1533-4254-20FD-13BC0A3F3972}|SIMS.API.csproj|solutionrelative:controllers\\teachercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -11,28 +63,16 @@
       "RelativeMoniker": "D:0:0:{FC43648C-1533-4254-20FD-13BC0A3F3972}|SIMS.API.csproj|solutionrelative:controllers\\studentcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{FC43648C-1533-4254-20FD-13BC0A3F3972}|SIMS.API.csproj|d:\\dotnetprojects\\sims.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FC43648C-1533-4254-20FD-13BC0A3F3972}|SIMS.API.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FC43648C-1533-4254-20FD-13BC0A3F3972}|SIMS.API.csproj|d:\\dotnetprojects\\sims.api\\controllers\\schedulescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FC43648C-1533-4254-20FD-13BC0A3F3972}|SIMS.API.csproj|solutionrelative:controllers\\schedulescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{FC43648C-1533-4254-20FD-13BC0A3F3972}|SIMS.API.csproj|d:\\dotnetprojects\\sims.api\\services\\schedule\\scheduleservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{FC43648C-1533-4254-20FD-13BC0A3F3972}|SIMS.API.csproj|solutionrelative:services\\schedule\\scheduleservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FC43648C-1533-4254-20FD-13BC0A3F3972}|SIMS.API.csproj|d:\\dotnetprojects\\sims.api\\services\\schedule\\ischeduleservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FC43648C-1533-4254-20FD-13BC0A3F3972}|SIMS.API.csproj|solutionrelative:services\\schedule\\ischeduleservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{FC43648C-1533-4254-20FD-13BC0A3F3972}|SIMS.API.csproj|d:\\dotnetprojects\\sims.api\\repositories\\implementations\\schedulerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{FC43648C-1533-4254-20FD-13BC0A3F3972}|SIMS.API.csproj|solutionrelative:repositories\\implementations\\schedulerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{FC43648C-1533-4254-20FD-13BC0A3F3972}|SIMS.API.csproj|d:\\dotnetprojects\\sims.api\\repositories\\interfaces\\ischedulerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FC43648C-1533-4254-20FD-13BC0A3F3972}|SIMS.API.csproj|solutionrelative:repositories\\interfaces\\ischedulerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{FC43648C-1533-4254-20FD-13BC0A3F3972}|SIMS.API.csproj|d:\\dotnetprojects\\sims.api\\dtos\\schedule\\calculatedscheduleeventdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FC43648C-1533-4254-20FD-13BC0A3F3972}|SIMS.API.csproj|solutionrelative:dtos\\schedule\\calculatedscheduleeventdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{FC43648C-1533-4254-20FD-13BC0A3F3972}|SIMS.API.csproj|d:\\dotnetprojects\\sims.api\\dtos\\schedule\\scheduleviewdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -47,16 +87,20 @@
       "RelativeMoniker": "D:0:0:{FC43648C-1533-4254-20FD-13BC0A3F3972}|SIMS.API.csproj|solutionrelative:dtos\\schedule\\schedulecreatedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{FC43648C-1533-4254-20FD-13BC0A3F3972}|SIMS.API.csproj|d:\\dotnetprojects\\sims.api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{FC43648C-1533-4254-20FD-13BC0A3F3972}|SIMS.API.csproj|solutionrelative:appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+      "AbsoluteMoniker": "D:0:0:{FC43648C-1533-4254-20FD-13BC0A3F3972}|SIMS.API.csproj|d:\\dotnetprojects\\sims.api\\dtos\\course\\courseviewdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FC43648C-1533-4254-20FD-13BC0A3F3972}|SIMS.API.csproj|solutionrelative:dtos\\course\\courseviewdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{FC43648C-1533-4254-20FD-13BC0A3F3972}|SIMS.API.csproj|d:\\dotnetprojects\\sims.api\\services\\enrollment\\enrollmentservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FC43648C-1533-4254-20FD-13BC0A3F3972}|SIMS.API.csproj|solutionrelative:services\\enrollment\\enrollmentservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{FC43648C-1533-4254-20FD-13BC0A3F3972}|SIMS.API.csproj|d:\\dotnetprojects\\sims.api\\helpers\\timeslothelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FC43648C-1533-4254-20FD-13BC0A3F3972}|SIMS.API.csproj|solutionrelative:helpers\\timeslothelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{FC43648C-1533-4254-20FD-13BC0A3F3972}|SIMS.API.csproj|d:\\dotnetprojects\\sims.api\\services\\teacher\\teacherservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FC43648C-1533-4254-20FD-13BC0A3F3972}|SIMS.API.csproj|solutionrelative:services\\teacher\\teacherservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{FC43648C-1533-4254-20FD-13BC0A3F3972}|SIMS.API.csproj|d:\\dotnetprojects\\sims.api\\controllers\\schedulescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FC43648C-1533-4254-20FD-13BC0A3F3972}|SIMS.API.csproj|solutionrelative:controllers\\schedulescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FC43648C-1533-4254-20FD-13BC0A3F3972}|SIMS.API.csproj|d:\\dotnetprojects\\sims.api\\repositories\\interfaces\\ischedulerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FC43648C-1533-4254-20FD-13BC0A3F3972}|SIMS.API.csproj|solutionrelative:repositories\\interfaces\\ischedulerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{FC43648C-1533-4254-20FD-13BC0A3F3972}|SIMS.API.csproj|d:\\dotnetprojects\\sims.api\\services\\student\\studentservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -101,8 +145,8 @@
       "VerticalTabListWidth": 256,
       "DocumentGroups": [
         {
-          "DockedWidth": 170,
-          "SelectedChildIndex": 5,
+          "DockedWidth": 135,
+          "SelectedChildIndex": 6,
           "Children": [
             {
               "$type": "Bookmark",
@@ -114,7 +158,290 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "EnrollmentsController.cs",
+              "DocumentMoniker": "D:\\DotNetProjects\\SIMS.API\\Controllers\\EnrollmentsController.cs",
+              "RelativeDocumentMoniker": "Controllers\\EnrollmentsController.cs",
+              "ToolTip": "D:\\DotNetProjects\\SIMS.API\\Controllers\\EnrollmentsController.cs",
+              "RelativeToolTip": "Controllers\\EnrollmentsController.cs",
+              "ViewState": "AgIAAB4AAAAAAAAAAAAYwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-05T21:01:24.641Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 3,
+              "Title": "CourseRepository.cs",
+              "DocumentMoniker": "D:\\DotNetProjects\\SIMS.API\\Repositories\\Implementations\\CourseRepository.cs",
+              "RelativeDocumentMoniker": "Repositories\\Implementations\\CourseRepository.cs",
+              "ToolTip": "D:\\DotNetProjects\\SIMS.API\\Repositories\\Implementations\\CourseRepository.cs",
+              "RelativeToolTip": "Repositories\\Implementations\\CourseRepository.cs",
+              "ViewState": "AgIAADoAAAAAAAAAAAA6wEAAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-05T16:45:26.978Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\DotNetProjects\\SIMS.API\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "D:\\DotNetProjects\\SIMS.API\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AgIAABoAAAAAAAAAAAAAACQAAABEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-03T17:46:42.088Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "EnrollmentService.cs",
+              "DocumentMoniker": "D:\\DotNetProjects\\SIMS.API\\Services\\Enrollment\\EnrollmentService.cs",
+              "RelativeDocumentMoniker": "Services\\Enrollment\\EnrollmentService.cs",
+              "ToolTip": "D:\\DotNetProjects\\SIMS.API\\Services\\Enrollment\\EnrollmentService.cs",
+              "RelativeToolTip": "Services\\Enrollment\\EnrollmentService.cs",
+              "ViewState": "AgIAAFsAAAAAAAAAAAAmwGsAAAAPAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-05T10:13:59.624Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "TeacherService.cs",
+              "DocumentMoniker": "D:\\DotNetProjects\\SIMS.API\\Services\\Teacher\\TeacherService.cs",
+              "RelativeDocumentMoniker": "Services\\Teacher\\TeacherService.cs",
+              "ToolTip": "D:\\DotNetProjects\\SIMS.API\\Services\\Teacher\\TeacherService.cs",
+              "RelativeToolTip": "Services\\Teacher\\TeacherService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAM4AAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-05T06:43:54.415Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "ICourseRepository.cs",
+              "DocumentMoniker": "D:\\DotNetProjects\\SIMS.API\\Repositories\\Interfaces\\ICourseRepository.cs",
+              "RelativeDocumentMoniker": "Repositories\\Interfaces\\ICourseRepository.cs",
+              "ToolTip": "D:\\DotNetProjects\\SIMS.API\\Repositories\\Interfaces\\ICourseRepository.cs",
+              "RelativeToolTip": "Repositories\\Interfaces\\ICourseRepository.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAAAwAAAAhAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-05T21:06:05.646Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "IEnrollmentService.cs",
+              "DocumentMoniker": "D:\\DotNetProjects\\SIMS.API\\Services\\Enrollment\\IEnrollmentService.cs",
+              "RelativeDocumentMoniker": "Services\\Enrollment\\IEnrollmentService.cs",
+              "ToolTip": "D:\\DotNetProjects\\SIMS.API\\Services\\Enrollment\\IEnrollmentService.cs",
+              "RelativeToolTip": "Services\\Enrollment\\IEnrollmentService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-05T21:09:14.88Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Course.cs",
+              "DocumentMoniker": "D:\\DotNetProjects\\SIMS.API\\Models\\Course.cs",
+              "RelativeDocumentMoniker": "Models\\Course.cs",
+              "ToolTip": "D:\\DotNetProjects\\SIMS.API\\Models\\Course.cs",
+              "RelativeToolTip": "Models\\Course.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-05T16:44:12.64Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "ScheduleService.cs",
+              "DocumentMoniker": "D:\\DotNetProjects\\SIMS.API\\Services\\Schedule\\ScheduleService.cs",
+              "RelativeDocumentMoniker": "Services\\Schedule\\ScheduleService.cs",
+              "ToolTip": "D:\\DotNetProjects\\SIMS.API\\Services\\Schedule\\ScheduleService.cs",
+              "RelativeToolTip": "Services\\Schedule\\ScheduleService.cs",
+              "ViewState": "AgIAAF4AAAAAAAAAAAAmwJ4AAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-05T10:52:41.545Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "ICourseService.cs",
+              "DocumentMoniker": "D:\\DotNetProjects\\SIMS.API\\Services\\Course\\ICourseService.cs",
+              "RelativeDocumentMoniker": "Services\\Course\\ICourseService.cs",
+              "ToolTip": "D:\\DotNetProjects\\SIMS.API\\Services\\Course\\ICourseService.cs",
+              "RelativeToolTip": "Services\\Course\\ICourseService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-05T15:02:56.923Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "CourseService.cs",
+              "DocumentMoniker": "D:\\DotNetProjects\\SIMS.API\\Services\\Course\\CourseService.cs",
+              "RelativeDocumentMoniker": "Services\\Course\\CourseService.cs",
+              "ToolTip": "D:\\DotNetProjects\\SIMS.API\\Services\\Course\\CourseService.cs",
+              "RelativeToolTip": "Services\\Course\\CourseService.cs",
+              "ViewState": "AgIAAE8AAAAAAAAAAAAqwHEAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-05T15:00:27.802Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "D:\\DotNetProjects\\SIMS.API\\appsettings.json",
+              "RelativeDocumentMoniker": "appsettings.json",
+              "ToolTip": "D:\\DotNetProjects\\SIMS.API\\appsettings.json",
+              "RelativeToolTip": "appsettings.json",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAABcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-07-30T01:36:26.396Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "CreateUpdateCourseDto.cs",
+              "DocumentMoniker": "D:\\DotNetProjects\\SIMS.API\\DTOs\\Course\\CreateUpdateCourseDto.cs",
+              "RelativeDocumentMoniker": "DTOs\\Course\\CreateUpdateCourseDto.cs",
+              "ToolTip": "D:\\DotNetProjects\\SIMS.API\\DTOs\\Course\\CreateUpdateCourseDto.cs",
+              "RelativeToolTip": "DTOs\\Course\\CreateUpdateCourseDto.cs",
+              "ViewState": "AgIAAAwAAAAAAAAAAAA2wBQAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-05T14:55:41.611Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "IScheduleService.cs",
+              "DocumentMoniker": "D:\\DotNetProjects\\SIMS.API\\Services\\Schedule\\IScheduleService.cs",
+              "RelativeDocumentMoniker": "Services\\Schedule\\IScheduleService.cs",
+              "ToolTip": "D:\\DotNetProjects\\SIMS.API\\Services\\Schedule\\IScheduleService.cs",
+              "RelativeToolTip": "Services\\Schedule\\IScheduleService.cs",
+              "ViewState": "AgIAAAgAAAAAAAAAAAAywBQAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-05T10:52:05.918Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "TeacherController.cs",
+              "DocumentMoniker": "D:\\DotNetProjects\\SIMS.API\\Controllers\\TeacherController.cs",
+              "RelativeDocumentMoniker": "Controllers\\TeacherController.cs",
+              "ToolTip": "D:\\DotNetProjects\\SIMS.API\\Controllers\\TeacherController.cs",
+              "RelativeToolTip": "Controllers\\TeacherController.cs",
+              "ViewState": "AgIAAGAAAAAAAAAAAAA+wHIAAAA4AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-05T06:29:25.374Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "StudentController.cs",
+              "DocumentMoniker": "D:\\DotNetProjects\\SIMS.API\\Controllers\\StudentController.cs",
+              "RelativeDocumentMoniker": "Controllers\\StudentController.cs",
+              "ToolTip": "D:\\DotNetProjects\\SIMS.API\\Controllers\\StudentController.cs",
+              "RelativeToolTip": "Controllers\\StudentController.cs",
+              "ViewState": "AgIAADkAAAAAAAAAAAAuwEsAAAA4AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-05T09:05:47.212Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "CalculatedScheduleEventDto.cs",
+              "DocumentMoniker": "D:\\DotNetProjects\\SIMS.API\\DTOs\\Schedule\\CalculatedScheduleEventDto.cs",
+              "RelativeDocumentMoniker": "DTOs\\Schedule\\CalculatedScheduleEventDto.cs",
+              "ToolTip": "D:\\DotNetProjects\\SIMS.API\\DTOs\\Schedule\\CalculatedScheduleEventDto.cs",
+              "RelativeToolTip": "DTOs\\Schedule\\CalculatedScheduleEventDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAALAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-05T14:58:35.837Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "ScheduleUpdateDto.cs",
+              "DocumentMoniker": "D:\\DotNetProjects\\SIMS.API\\DTOs\\Schedule\\ScheduleUpdateDto.cs",
+              "RelativeDocumentMoniker": "DTOs\\Schedule\\ScheduleUpdateDto.cs",
+              "ToolTip": "D:\\DotNetProjects\\SIMS.API\\DTOs\\Schedule\\ScheduleUpdateDto.cs",
+              "RelativeToolTip": "DTOs\\Schedule\\ScheduleUpdateDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-05T10:45:02.827Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "ScheduleCreateDto.cs",
+              "DocumentMoniker": "D:\\DotNetProjects\\SIMS.API\\DTOs\\Schedule\\ScheduleCreateDto.cs",
+              "RelativeDocumentMoniker": "DTOs\\Schedule\\ScheduleCreateDto.cs",
+              "ToolTip": "D:\\DotNetProjects\\SIMS.API\\DTOs\\Schedule\\ScheduleCreateDto.cs",
+              "RelativeToolTip": "DTOs\\Schedule\\ScheduleCreateDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-05T10:44:00.88Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "CourseViewDto.cs",
+              "DocumentMoniker": "D:\\DotNetProjects\\SIMS.API\\DTOs\\Course\\CourseViewDto.cs",
+              "RelativeDocumentMoniker": "DTOs\\Course\\CourseViewDto.cs",
+              "ToolTip": "D:\\DotNetProjects\\SIMS.API\\DTOs\\Course\\CourseViewDto.cs",
+              "RelativeToolTip": "DTOs\\Course\\CourseViewDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-05T14:55:57.732Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "ScheduleRepository.cs",
+              "DocumentMoniker": "D:\\DotNetProjects\\SIMS.API\\Repositories\\Implementations\\ScheduleRepository.cs",
+              "RelativeDocumentMoniker": "Repositories\\Implementations\\ScheduleRepository.cs",
+              "ToolTip": "D:\\DotNetProjects\\SIMS.API\\Repositories\\Implementations\\ScheduleRepository.cs",
+              "RelativeToolTip": "Repositories\\Implementations\\ScheduleRepository.cs",
+              "ViewState": "AgIAAAoAAAAAAAAAAAAswFQAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-05T10:47:42.073Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "ScheduleViewDto.cs",
+              "DocumentMoniker": "D:\\DotNetProjects\\SIMS.API\\DTOs\\Schedule\\ScheduleViewDto.cs",
+              "RelativeDocumentMoniker": "DTOs\\Schedule\\ScheduleViewDto.cs",
+              "ToolTip": "D:\\DotNetProjects\\SIMS.API\\DTOs\\Schedule\\ScheduleViewDto.cs",
+              "RelativeToolTip": "DTOs\\Schedule\\ScheduleViewDto.cs",
+              "ViewState": "AgIAAAwAAAAAAAAAAAA4wBIAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-05T10:45:49.48Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "TimeSlotHelper.cs",
+              "DocumentMoniker": "D:\\DotNetProjects\\SIMS.API\\Helpers\\TimeSlotHelper.cs",
+              "RelativeDocumentMoniker": "Helpers\\TimeSlotHelper.cs",
+              "ToolTip": "D:\\DotNetProjects\\SIMS.API\\Helpers\\TimeSlotHelper.cs",
+              "RelativeToolTip": "Helpers\\TimeSlotHelper.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABgAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-05T14:48:57.081Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
               "Title": "SchedulesController.cs",
               "DocumentMoniker": "D:\\DotNetProjects\\SIMS.API\\Controllers\\SchedulesController.cs",
               "RelativeDocumentMoniker": "Controllers\\SchedulesController.cs",
@@ -122,90 +449,11 @@
               "RelativeToolTip": "Controllers\\SchedulesController.cs",
               "ViewState": "AgIAACsAAAAAAAAAAAAcwD4AAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-05T10:55:00.931Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-08-05T10:55:00.931Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "ScheduleService.cs",
-              "DocumentMoniker": "D:\\DotNetProjects\\SIMS.API\\Services\\Schedule\\ScheduleService.cs",
-              "RelativeDocumentMoniker": "Services\\Schedule\\ScheduleService.cs",
-              "ToolTip": "D:\\DotNetProjects\\SIMS.API\\Services\\Schedule\\ScheduleService.cs",
-              "RelativeToolTip": "Services\\Schedule\\ScheduleService.cs",
-              "ViewState": "AgIAAHgAAAAAAAAAAAAcwI8AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-05T10:52:41.545Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "IScheduleService.cs",
-              "DocumentMoniker": "D:\\DotNetProjects\\SIMS.API\\Services\\Schedule\\IScheduleService.cs",
-              "RelativeDocumentMoniker": "Services\\Schedule\\IScheduleService.cs",
-              "ToolTip": "D:\\DotNetProjects\\SIMS.API\\Services\\Schedule\\IScheduleService.cs",
-              "RelativeToolTip": "Services\\Schedule\\IScheduleService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAABCAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-05T10:52:05.918Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "TeacherController.cs",
-              "DocumentMoniker": "D:\\DotNetProjects\\SIMS.API\\Controllers\\TeacherController.cs",
-              "RelativeDocumentMoniker": "Controllers\\TeacherController.cs",
-              "ToolTip": "D:\\DotNetProjects\\SIMS.API\\Controllers\\TeacherController.cs",
-              "RelativeToolTip": "Controllers\\TeacherController.cs",
-              "ViewState": "AgIAAIEAAAAAAAAAAAAAAHgAAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-05T06:29:25.374Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "StudentController.cs",
-              "DocumentMoniker": "D:\\DotNetProjects\\SIMS.API\\Controllers\\StudentController.cs",
-              "RelativeDocumentMoniker": "Controllers\\StudentController.cs",
-              "ToolTip": "D:\\DotNetProjects\\SIMS.API\\Controllers\\StudentController.cs",
-              "RelativeToolTip": "Controllers\\StudentController.cs",
-              "ViewState": "AgIAAD4AAAAAAAAAAAAcwFoAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-05T09:05:47.212Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Program.cs",
-              "DocumentMoniker": "D:\\DotNetProjects\\SIMS.API\\Program.cs",
-              "RelativeDocumentMoniker": "Program.cs",
-              "ToolTip": "D:\\DotNetProjects\\SIMS.API\\Program.cs",
-              "RelativeToolTip": "Program.cs",
-              "ViewState": "AgIAAA8AAAAAAAAAAAAAACUAAABBAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-03T17:46:42.088Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "ScheduleRepository.cs",
-              "DocumentMoniker": "D:\\DotNetProjects\\SIMS.API\\Repositories\\Implementations\\ScheduleRepository.cs",
-              "RelativeDocumentMoniker": "Repositories\\Implementations\\ScheduleRepository.cs",
-              "ToolTip": "D:\\DotNetProjects\\SIMS.API\\Repositories\\Implementations\\ScheduleRepository.cs",
-              "RelativeToolTip": "Repositories\\Implementations\\ScheduleRepository.cs",
-              "ViewState": "AgIAADkAAAAAAAAAAAAcwEkAAAAfAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-05T10:47:42.073Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 24,
               "Title": "IScheduleRepository.cs",
               "DocumentMoniker": "D:\\DotNetProjects\\SIMS.API\\Repositories\\Interfaces\\IScheduleRepository.cs",
               "RelativeDocumentMoniker": "Repositories\\Interfaces\\IScheduleRepository.cs",
@@ -213,64 +461,11 @@
               "RelativeToolTip": "Repositories\\Interfaces\\IScheduleRepository.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAhAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-05T10:46:54.423Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-08-05T10:46:54.423Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "ScheduleViewDto.cs",
-              "DocumentMoniker": "D:\\DotNetProjects\\SIMS.API\\DTOs\\Schedule\\ScheduleViewDto.cs",
-              "RelativeDocumentMoniker": "DTOs\\Schedule\\ScheduleViewDto.cs",
-              "ToolTip": "D:\\DotNetProjects\\SIMS.API\\DTOs\\Schedule\\ScheduleViewDto.cs",
-              "RelativeToolTip": "DTOs\\Schedule\\ScheduleViewDto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAA+AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-05T10:45:49.48Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "ScheduleUpdateDto.cs",
-              "DocumentMoniker": "D:\\DotNetProjects\\SIMS.API\\DTOs\\Schedule\\ScheduleUpdateDto.cs",
-              "RelativeDocumentMoniker": "DTOs\\Schedule\\ScheduleUpdateDto.cs",
-              "ToolTip": "D:\\DotNetProjects\\SIMS.API\\DTOs\\Schedule\\ScheduleUpdateDto.cs",
-              "RelativeToolTip": "DTOs\\Schedule\\ScheduleUpdateDto.cs",
-              "ViewState": "AgIAAAIAAAAAAAAAAAAcwBQAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-05T10:45:02.827Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "ScheduleCreateDto.cs",
-              "DocumentMoniker": "D:\\DotNetProjects\\SIMS.API\\DTOs\\Schedule\\ScheduleCreateDto.cs",
-              "RelativeDocumentMoniker": "DTOs\\Schedule\\ScheduleCreateDto.cs",
-              "ToolTip": "D:\\DotNetProjects\\SIMS.API\\DTOs\\Schedule\\ScheduleCreateDto.cs",
-              "RelativeToolTip": "DTOs\\Schedule\\ScheduleCreateDto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAApAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-05T10:44:00.88Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "EnrollmentService.cs",
-              "DocumentMoniker": "D:\\DotNetProjects\\SIMS.API\\Services\\Enrollment\\EnrollmentService.cs",
-              "RelativeDocumentMoniker": "Services\\Enrollment\\EnrollmentService.cs",
-              "ToolTip": "D:\\DotNetProjects\\SIMS.API\\Services\\Enrollment\\EnrollmentService.cs",
-              "RelativeToolTip": "Services\\Enrollment\\EnrollmentService.cs",
-              "ViewState": "AgIAAHcAAAAAAAAAAAAAAHcAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-05T10:13:59.624Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 28,
               "Title": "IAttendanceRepository.cs",
               "DocumentMoniker": "D:\\DotNetProjects\\SIMS.API\\Repositories\\Interfaces\\IAttendanceRepository.cs",
               "RelativeDocumentMoniker": "Repositories\\Interfaces\\IAttendanceRepository.cs",
@@ -278,12 +473,11 @@
               "RelativeToolTip": "Repositories\\Interfaces\\IAttendanceRepository.cs",
               "ViewState": "AgIAAAYAAAAAAAAAAAAAAA0AAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-05T09:32:40.423Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-08-05T09:32:40.423Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
+              "DocumentIndex": 29,
               "Title": "EnrollmentRepository.cs",
               "DocumentMoniker": "D:\\DotNetProjects\\SIMS.API\\Repositories\\Implementations\\EnrollmentRepository.cs",
               "RelativeDocumentMoniker": "Repositories\\Implementations\\EnrollmentRepository.cs",
@@ -291,25 +485,11 @@
               "RelativeToolTip": "Repositories\\Implementations\\EnrollmentRepository.cs",
               "ViewState": "AgIAABoAAAAAAAAAAAAmwCQAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-05T09:08:50.834Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-08-05T09:08:50.834Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "appsettings.json",
-              "DocumentMoniker": "D:\\DotNetProjects\\SIMS.API\\appsettings.json",
-              "RelativeDocumentMoniker": "appsettings.json",
-              "ToolTip": "D:\\DotNetProjects\\SIMS.API\\appsettings.json",
-              "RelativeToolTip": "appsettings.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-07-30T01:36:26.396Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 27,
               "Title": "AttendanceRepository.cs",
               "DocumentMoniker": "D:\\DotNetProjects\\SIMS.API\\Repositories\\Implementations\\AttendanceRepository.cs",
               "RelativeDocumentMoniker": "Repositories\\Implementations\\AttendanceRepository.cs",
@@ -317,12 +497,11 @@
               "RelativeToolTip": "Repositories\\Implementations\\AttendanceRepository.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAANAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-05T09:33:25.866Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-08-05T09:33:25.866Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 26,
               "Title": "IStudentService.cs",
               "DocumentMoniker": "D:\\DotNetProjects\\SIMS.API\\Services\\Student\\IStudentService.cs",
               "RelativeDocumentMoniker": "Services\\Student\\IStudentService.cs",
@@ -330,25 +509,11 @@
               "RelativeToolTip": "Services\\Student\\IStudentService.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-05T09:38:36.695Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-08-05T09:38:36.695Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "TeacherService.cs",
-              "DocumentMoniker": "D:\\DotNetProjects\\SIMS.API\\Services\\Teacher\\TeacherService.cs",
-              "RelativeDocumentMoniker": "Services\\Teacher\\TeacherService.cs",
-              "ToolTip": "D:\\DotNetProjects\\SIMS.API\\Services\\Teacher\\TeacherService.cs",
-              "RelativeToolTip": "Services\\Teacher\\TeacherService.cs",
-              "ViewState": "AgIAACgAAAAAAAAAAAA7wDMAAAAPAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-05T06:43:54.415Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 25,
               "Title": "StudentService.cs",
               "DocumentMoniker": "D:\\DotNetProjects\\SIMS.API\\Services\\Student\\StudentService.cs",
               "RelativeDocumentMoniker": "Services\\Student\\StudentService.cs",
@@ -356,12 +521,11 @@
               "RelativeToolTip": "Services\\Student\\StudentService.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAnAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-05T09:39:09.588Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-08-05T09:39:09.588Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 19,
+              "DocumentIndex": 30,
               "Title": "ITeacherService.cs",
               "DocumentMoniker": "D:\\DotNetProjects\\SIMS.API\\Services\\Teacher\\ITeacherService.cs",
               "RelativeDocumentMoniker": "Services\\Teacher\\ITeacherService.cs",
@@ -369,12 +533,11 @@
               "RelativeToolTip": "Services\\Teacher\\ITeacherService.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-05T06:42:43.744Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-08-05T06:42:43.744Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 20,
+              "DocumentIndex": 31,
               "Title": "AuthController.cs",
               "DocumentMoniker": "D:\\DotNetProjects\\SIMS.API\\Controllers\\AuthController.cs",
               "RelativeDocumentMoniker": "Controllers\\AuthController.cs",
@@ -386,7 +549,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 21,
+              "DocumentIndex": 32,
               "Title": "Dockerfile",
               "DocumentMoniker": "D:\\DotNetProjects\\SIMS.API\\Dockerfile",
               "RelativeDocumentMoniker": "Dockerfile",
@@ -398,7 +561,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 22,
+              "DocumentIndex": 33,
               "Title": "Attendance.cs",
               "DocumentMoniker": "D:\\DotNetProjects\\SIMS.API\\Models\\Attendance.cs",
               "RelativeDocumentMoniker": "Models\\Attendance.cs",
@@ -411,7 +574,7 @@
           ]
         },
         {
-          "DockedWidth": 42,
+          "DockedWidth": 77,
           "SelectedChildIndex": -1,
           "Children": [
             {
@@ -433,6 +596,10 @@
             {
               "$type": "Bookmark",
               "Name": "ST:114:0:{e8034f19-ab72-4f06-83fd-f6832b41aa63}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:115:0:{e8034f19-ab72-4f06-83fd-f6832b41aa63}"
             }
           ]
         }

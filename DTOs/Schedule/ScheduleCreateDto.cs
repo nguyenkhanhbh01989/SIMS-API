@@ -1,4 +1,6 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using SIMS.API.DTOs.Schedule;
+using SIMS.API.Models;
+using System.ComponentModel.DataAnnotations;
 
 namespace SIMS.API.DTOs.Schedule
 {
@@ -8,14 +10,12 @@ namespace SIMS.API.DTOs.Schedule
         public int CourseId { get; set; }
 
         [Required]
-        [Range(0, 6, ErrorMessage = "Day of week must be between 0 (Sunday) and 6 (Saturday).")]
+        [Range(0, 6)]
         public int DayOfWeek { get; set; }
 
         [Required]
-        public TimeOnly StartTime { get; set; }
-
-        [Required]
-        public TimeOnly EndTime { get; set; }
+        [Range(1, 7)]
+        public int SlotNumber { get; set; }
 
         [Required]
         [StringLength(100)]

@@ -54,13 +54,12 @@ namespace SIMS.API.Repositories.Implementations
             return await _context.Schedules
                 .Where(s => s.Course.TeacherId == teacherId)
                 .Include(s => s.Course)
-                .OrderBy(s => s.DayOfWeek).ThenBy(s => s.StartTime)
+                .OrderBy(s => s.DayOfWeek).ThenBy(s => s.SlotNumber)
                 .ToListAsync();
         }
 
         public async Task<IEnumerable<Schedule>> GetByStudentIdAsync(int studentId)
         {
-            // Lấy các CourseId mà sinh viên đã đăng ký
             var courseIds = await _context.CourseStudents
                 .Where(cs => cs.StudentId == studentId)
                 .Select(cs => cs.CourseId)
@@ -70,7 +69,7 @@ namespace SIMS.API.Repositories.Implementations
                 .Where(s => courseIds.Contains(s.CourseId))
                 .Include(s => s.Course)
                 .ThenInclude(c => c.Teacher)
-                .OrderBy(s => s.DayOfWeek).ThenBy(s => s.StartTime)
+                .OrderBy(s => s.DayOfWeek).ThenBy(s => s.SlotNumber)
                 .ToListAsync();
         }
 
@@ -79,7 +78,7 @@ namespace SIMS.API.Repositories.Implementations
             return await _context.Schedules
                 .Include(s => s.Course)
                 .ThenInclude(c => c.Teacher)
-                .OrderBy(s => s.Course.Name).ThenBy(s => s.DayOfWeek).ThenBy(s => s.StartTime)
+                .OrderBy(s => s.Course.Name).ThenBy(s => s.DayOfWeek).ThenBy(s => s.SlotNumber)
                 .ToListAsync();
         }
     }

@@ -9,8 +9,13 @@ namespace SIMS.API.Services.Schedule
         Task<ScheduleViewDto> CreateScheduleAsync(ScheduleCreateDto scheduleDto);
         Task<ScheduleViewDto> UpdateScheduleAsync(int id, ScheduleUpdateDto scheduleDto);
         Task<bool> DeleteScheduleAsync(int id);
-        Task<IEnumerable<ScheduleViewDto>> GetTeacherScheduleAsync(int teacherId);
-        Task<IEnumerable<ScheduleViewDto>> GetStudentScheduleAsync(int studentId);
+
+        // Đảm bảo chỉ có phiên bản này tồn tại
+        Task<IEnumerable<CalculatedScheduleEventDto>> GetTeacherScheduleAsync(int teacherId);
+
+        // Đảm bảo chỉ có phiên bản này tồn tại
+        Task<IEnumerable<CalculatedScheduleEventDto>> GetStudentScheduleAsync(int studentId);
+
         Task<IEnumerable<ScheduleViewDto>> GetAllSchedulesAsync();
     }
 }

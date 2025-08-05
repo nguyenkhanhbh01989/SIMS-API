@@ -1,8 +1,4 @@
-﻿using SIMS.API.DTOs.Course;
-using SIMS.API.Models;
-using System.ComponentModel.DataAnnotations;
-
-namespace SIMS.API.DTOs.Course
+﻿namespace SIMS.API.DTOs.Course
 {
     public class CourseViewDto
     {
@@ -10,7 +6,11 @@ namespace SIMS.API.DTOs.Course
         public required string Name { get; set; }
         public required string Semester { get; set; }
         public int? TeacherId { get; set; }
-        public string? TeacherName { get; set; } // Thêm tên giáo viên để hiển thị
+        public string? TeacherName { get; set; }
         public DateTime CreatedAt { get; set; }
+
+        // Thêm 2 thuộc tính mới
+        public DateOnly? StartDate { get; set; }
+        public DateOnly? EndDate { get; set; }
     }
 }

@@ -14,6 +14,6 @@ namespace SIMS.API.Repositories.Interfaces
 
         // --- PHƯƠNG THỨC MỚI CHO GIÁO VIÊN ---
         Task<IEnumerable<Course>> GetByTeacherIdAsync(int teacherId);
-        Task<IEnumerable<User>> GetStudentsByCourseIdAsync(int courseId);
+        Task<IEnumerable<CourseStudent>> GetEnrollmentsByCourseIdAsync(int courseId);
     }
 }

@@ -94,13 +94,17 @@ namespace SIMS.API.Services.Enrollment
 
         public async Task<IEnumerable<StudentInCourseDto>> GetStudentsInCourseAsync(int courseId)
         {
-            var students = await _courseRepository.GetStudentsByCourseIdAsync(courseId);
-            return students.Select(s => new StudentInCourseDto
+            // Gọi phương thức mới từ repository
+            var enrollments = await _courseRepository.GetEnrollmentsByCourseIdAsync(courseId);
+
+            // Bây giờ 'enrollments' là một danh sách các đối tượng CourseStudent,
+            // mỗi đối tượng đã chứa cả thông tin Student và ngày EnrolledAt.
+            return enrollments.Select(e => new StudentInCourseDto
             {
-                StudentId = s.Id,
-                FullName = s.FullName ?? "N/A",
-                Email = s.Email,
-                EnrolledAt = s.CourseStudents.FirstOrDefault(cs => cs.CourseId == courseId)?.EnrolledAt ?? default
+                StudentId = e.StudentId,
+                FullName = e.Student.FullName ?? "N/A", // Lấy từ e.Student
+                Email = e.Student.Email,               // Lấy từ e.Student
+                EnrolledAt = e.EnrolledAt              // Lấy trực tiếp từ e
             });
         }
 

@@ -918,6 +918,16 @@
             "type": "integer",
             "format": "int32",
             "nullable": true
+          },
+          "startDate": {
+            "type": "string",
+            "format": "date",
+            "nullable": true
+          },
+          "endDate": {
+            "type": "string",
+            "format": "date",
+            "nullable": true
           }
         },
         "additionalProperties": false
@@ -1004,9 +1014,8 @@
         "required": [
           "courseId",
           "dayOfWeek",
-          "endTime",
           "location",
-          "startTime"
+          "slotNumber"
         ],
         "type": "object",
         "properties": {
@@ -1020,13 +1029,11 @@
             "type": "integer",
             "format": "int32"
           },
-          "startTime": {
-            "type": "string",
-            "format": "time"
-          },
-          "endTime": {
-            "type": "string",
-            "format": "time"
+          "slotNumber": {
+            "maximum": 7,
+            "minimum": 1,
+            "type": "integer",
+            "format": "int32"
           },
           "location": {
             "maxLength": 100,
@@ -1039,9 +1046,8 @@
       "ScheduleUpdateDto": {
         "required": [
           "dayOfWeek",
-          "endTime",
           "location",
-          "startTime"
+          "slotNumber"
         ],
         "type": "object",
         "properties": {
@@ -1051,13 +1057,11 @@
             "type": "integer",
             "format": "int32"
           },
-          "startTime": {
-            "type": "string",
-            "format": "time"
-          },
-          "endTime": {
-            "type": "string",
-            "format": "time"
+          "slotNumber": {
+            "maximum": 7,
+            "minimum": 1,
+            "type": "integer",
+            "format": "int32"
           },
           "location": {
             "maxLength": 100,

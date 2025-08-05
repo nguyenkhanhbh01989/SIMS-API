@@ -12,7 +12,10 @@ namespace SIMS.API.DTOs.Course
         [StringLength(20)]
         public required string Semester { get; set; }
 
-        // ID của giáo viên phụ trách. Có thể là null.
         public int? TeacherId { get; set; }
+
+        // Các thuộc tính này là nullable, khớp với database
+        public DateOnly? StartDate { get; set; }
+        public DateOnly? EndDate { get; set; }
     }
 }

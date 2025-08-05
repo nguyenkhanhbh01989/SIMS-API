@@ -112,8 +112,8 @@ namespace SIMS.API.Controllers
         {
             if (!User.IsInRole("Teacher")) return Forbid();
             var teacherId = GetCurrentUserId();
-            var schedule = await _scheduleService.GetTeacherScheduleAsync(teacherId);
-            return Ok(schedule);
+            var scheduleEvents = await _scheduleService.GetTeacherScheduleAsync(teacherId); 
+            return Ok(scheduleEvents);
         }
 
         // SỬA LỖI: Đảm bảo phương thức này nằm BÊN TRONG class

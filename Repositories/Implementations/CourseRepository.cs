@@ -64,12 +64,14 @@ namespace SIMS.API.Repositories.Implementations
                 .ToListAsync();
         }
 
-        public async Task<IEnumerable<User>> GetStudentsByCourseIdAsync(int courseId)
+        // SỬA LỖI: Thay thế phương thức GetStudentsByCourseIdAsync bằng phương thức mới này
+        public async Task<IEnumerable<CourseStudent>> GetEnrollmentsByCourseIdAsync(int courseId)
         {
+            // Truy vấn này sẽ lấy các bản ghi CourseStudent và bao gồm cả thông tin của Student liên quan
             return await _context.CourseStudents
                 .Where(cs => cs.CourseId == courseId)
-                .Select(cs => cs.Student)
-                .OrderBy(s => s.FullName)
+                .Include(cs => cs.Student) // Quan trọng: Lấy thông tin của sinh viên
+                .OrderBy(cs => cs.Student.FullName)
                 .ToListAsync();
         }
     }

@@ -1,4 +1,5 @@
 ﻿using SIMS.API.DTOs.Schedule;
+using SIMS.API.Helpers;
 using SIMS.API.Models;
 using SIMS.API.Repositories.Interfaces;
 using System.Collections.Generic;
@@ -21,22 +22,19 @@ namespace SIMS.API.Services.Schedule
         public async Task<ScheduleViewDto> CreateScheduleAsync(ScheduleCreateDto scheduleDto)
         {
             var course = await _courseRepository.GetByIdAsync(scheduleDto.CourseId);
-            if (course == null)
-            {
-                throw new ApplicationException("Môn học không tồn tại.");
-            }
+            if (course == null) throw new ApplicationException("Môn học không tồn tại.");
+            if (TimeSlotHelper.GetTimeSlot(scheduleDto.SlotNumber) == null) throw new ApplicationException("Ca học không hợp lệ.");
 
             if (course.TeacherId.HasValue)
             {
-                await CheckForConflict(course.TeacherId.Value, 0, scheduleDto.DayOfWeek, scheduleDto.StartTime, scheduleDto.EndTime);
+                await CheckForConflict(course.TeacherId.Value, 0, scheduleDto.DayOfWeek, scheduleDto.SlotNumber);
             }
 
             var newSchedule = new Models.Schedule
             {
                 CourseId = scheduleDto.CourseId,
                 DayOfWeek = scheduleDto.DayOfWeek,
-                StartTime = scheduleDto.StartTime,
-                EndTime = scheduleDto.EndTime,
+                SlotNumber = scheduleDto.SlotNumber,
                 Location = scheduleDto.Location
             };
 
@@ -48,19 +46,16 @@ namespace SIMS.API.Services.Schedule
         public async Task<ScheduleViewDto> UpdateScheduleAsync(int id, ScheduleUpdateDto scheduleDto)
         {
             var scheduleToUpdate = await _scheduleRepository.GetByIdAsync(id);
-            if (scheduleToUpdate == null)
-            {
-                throw new ApplicationException("Không tìm thấy lịch học để cập nhật.");
-            }
+            if (scheduleToUpdate == null) throw new ApplicationException("Không tìm thấy lịch học.");
+            if (TimeSlotHelper.GetTimeSlot(scheduleDto.SlotNumber) == null) throw new ApplicationException("Ca học không hợp lệ.");
 
             if (scheduleToUpdate.Course.TeacherId.HasValue)
             {
-                await CheckForConflict(scheduleToUpdate.Course.TeacherId.Value, id, scheduleDto.DayOfWeek, scheduleDto.StartTime, scheduleDto.EndTime);
+                await CheckForConflict(scheduleToUpdate.Course.TeacherId.Value, id, scheduleDto.DayOfWeek, scheduleDto.SlotNumber);
             }
 
             scheduleToUpdate.DayOfWeek = scheduleDto.DayOfWeek;
-            scheduleToUpdate.StartTime = scheduleDto.StartTime;
-            scheduleToUpdate.EndTime = scheduleDto.EndTime;
+            scheduleToUpdate.SlotNumber = scheduleDto.SlotNumber;
             scheduleToUpdate.Location = scheduleDto.Location;
 
             var updatedSchedule = await _scheduleRepository.UpdateAsync(scheduleToUpdate);
@@ -75,16 +70,16 @@ namespace SIMS.API.Services.Schedule
             return true;
         }
 
-        public async Task<IEnumerable<ScheduleViewDto>> GetTeacherScheduleAsync(int teacherId)
+        public async Task<IEnumerable<CalculatedScheduleEventDto>> GetTeacherScheduleAsync(int teacherId)
         {
             var schedules = await _scheduleRepository.GetByTeacherIdAsync(teacherId);
-            return schedules.Select(MapToViewDto);
+            return CalculateEventsFromSchedules(schedules);
         }
 
-        public async Task<IEnumerable<ScheduleViewDto>> GetStudentScheduleAsync(int studentId)
+        public async Task<IEnumerable<CalculatedScheduleEventDto>> GetStudentScheduleAsync(int studentId)
         {
             var schedules = await _scheduleRepository.GetByStudentIdAsync(studentId);
-            return schedules.Select(MapToViewDto);
+            return CalculateEventsFromSchedules(schedules);
         }
 
         public async Task<IEnumerable<ScheduleViewDto>> GetAllSchedulesAsync()
@@ -93,27 +88,54 @@ namespace SIMS.API.Services.Schedule
             return schedules.Select(MapToViewDto);
         }
 
-        // Phương thức helper để kiểm tra xung đột lịch của giáo viên
-        private async Task CheckForConflict(int teacherId, int currentScheduleId, int dayOfWeek, TimeOnly startTime, TimeOnly endTime)
+        private async Task CheckForConflict(int teacherId, int currentScheduleId, int dayOfWeek, int slotNumber)
         {
             var teacherSchedules = await _scheduleRepository.GetByTeacherIdAsync(teacherId);
             var conflictingSchedule = teacherSchedules.FirstOrDefault(s =>
-                s.Id != currentScheduleId && // Bỏ qua chính lịch đang sửa
+                s.Id != currentScheduleId &&
                 s.DayOfWeek == dayOfWeek &&
-                startTime < s.EndTime &&
-                endTime > s.StartTime);
+                s.SlotNumber == slotNumber);
 
             if (conflictingSchedule != null)
             {
-                throw new ApplicationException(
-                    $"Xung đột lịch! Giáo viên đã có lịch dạy môn '{conflictingSchedule.Course.Name}' " +
-                    $"từ {conflictingSchedule.StartTime} đến {conflictingSchedule.EndTime} vào ngày này.");
+                throw new ApplicationException($"Xung đột lịch! Giáo viên đã có lịch dạy môn '{conflictingSchedule.Course.Name}' vào ca {slotNumber} ngày này.");
             }
         }
 
-        // Phương thức helper để map sang DTO
+        private List<CalculatedScheduleEventDto> CalculateEventsFromSchedules(IEnumerable<Models.Schedule> schedules)
+        {
+            var events = new List<CalculatedScheduleEventDto>();
+            foreach (var schedule in schedules)
+            {
+                if (!schedule.Course.StartDate.HasValue || !schedule.Course.EndDate.HasValue) continue;
+
+                var timeSlot = TimeSlotHelper.GetTimeSlot(schedule.SlotNumber);
+                if (timeSlot == null) continue;
+
+                for (var day = schedule.Course.StartDate.Value; day <= schedule.Course.EndDate.Value; day = day.AddDays(1))
+                {
+                    if ((int)day.DayOfWeek == schedule.DayOfWeek)
+                    {
+                        events.Add(new CalculatedScheduleEventDto
+                        {
+                            CourseId = schedule.CourseId,
+                            CourseName = schedule.Course.Name,
+                            TeacherName = schedule.Course.Teacher?.FullName,
+                            SpecificDate = day,
+                            DayOfWeek = ConvertDayOfWeekToString(schedule.DayOfWeek),
+                            StartTime = timeSlot.StartTime,
+                            EndTime = timeSlot.EndTime,
+                            Location = schedule.Location
+                        });
+                    }
+                }
+            }
+            return events.OrderBy(e => e.SpecificDate).ThenBy(e => e.StartTime).ToList();
+        }
+
         private ScheduleViewDto MapToViewDto(Models.Schedule schedule)
         {
+            var timeSlot = TimeSlotHelper.GetTimeSlot(schedule.SlotNumber);
             return new ScheduleViewDto
             {
                 Id = schedule.Id,
@@ -122,26 +144,16 @@ namespace SIMS.API.Services.Schedule
                 TeacherId = schedule.Course.TeacherId,
                 TeacherName = schedule.Course.Teacher?.FullName,
                 DayOfWeek = ConvertDayOfWeekToString(schedule.DayOfWeek),
-                StartTime = schedule.StartTime,
-                EndTime = schedule.EndTime,
+                SlotNumber = schedule.SlotNumber,
+                StartTime = timeSlot?.StartTime ?? default,
+                EndTime = timeSlot?.EndTime ?? default,
                 Location = schedule.Location
             };
         }
 
         private string ConvertDayOfWeekToString(int day)
         {
-            return day switch
-            {
-                0 => "Sunday",
-                1 => "Monday",
-                2 => "Tuesday",
-                3 => "Wednesday",
-                4 => "Thursday",
-                5 => "Friday",
-                6 => "Saturday",
-                _ => "Unknown"
-            };
-
+            return ((DayOfWeek)day).ToString(); // Cách đơn giản hơn
         }
     }
 }

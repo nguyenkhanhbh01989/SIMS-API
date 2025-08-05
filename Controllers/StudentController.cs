@@ -73,8 +73,8 @@ namespace SIMS.API.Controllers
         public async Task<IActionResult> GetMySchedule()
         {
             var studentId = GetCurrentUserId();
-            var schedule = await _scheduleService.GetStudentScheduleAsync(studentId);
-            return Ok(schedule);
+            var scheduleEvents = await _scheduleService.GetStudentScheduleAsync(studentId); // Đã đổi tên biến để rõ nghĩa
+            return Ok(scheduleEvents);
         }
 
         // SỬA LỖI: Đảm bảo phương thức này nằm BÊN TRONG class

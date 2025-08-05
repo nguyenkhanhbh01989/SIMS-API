@@ -6,7 +6,8 @@ using Microsoft.EntityFrameworkCore;
 
 namespace SIMS.API.Models;
 
-[Index("DayOfWeek", "StartTime", "Location", Name = "UQ_Schedule_Location_Time", IsUnique = true)]
+[Index("CourseId", "DayOfWeek", "SlotNumber", Name = "UQ_Schedule_Course_Slot", IsUnique = true)]
+[Index("DayOfWeek", "SlotNumber", "Location", Name = "UQ_Schedule_Location_Slot", IsUnique = true)]
 public partial class Schedule
 {
     [Key]
@@ -16,9 +17,7 @@ public partial class Schedule
 
     public int DayOfWeek { get; set; }
 
-    public TimeOnly StartTime { get; set; }
-
-    public TimeOnly EndTime { get; set; }
+    public int SlotNumber { get; set; }
 
     [StringLength(100)]
     public string Location { get; set; } = null!;
